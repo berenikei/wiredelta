@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    
+
+    
+    <title>My Day</title>
+</head>
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<nav class="navbar nav">
+    <a class="navbar-brand" href="index.html">Dashboard</a>   
+    <span class="navbar-text">
+            <input type="text" id="title" placeholder="Change title here">
+            <button type="button" id="btnTitle">Submit</button>
+
+            <select name="colors" onchange="changeColor(this)">
+                    <option value="GhostWhite" selected="select">Default</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="Cornsilk">Almond</option>
+                  </select>
+    </span> 
+</nav>
+
+
+
+
+<!-- navigation section -->
+<div class="container main-section">
+    <div class="row">
+        <div class="col-4 dashboard ">
+        <ul class="list-group list-group-flush">
+            <div class="dashboard-header list-group-item d-flex align-items-center flex-column ">
+                <img src="./assets/sofie.png" class="avatar" alt="">
+                <p>Welcome, Sofie!</p>
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+                                
+            <li class="list-group-item">Profile</li>
+            <li class="list-group-item active">Overview</li>
+            <li class="list-group-item">Meetings</li>
+            <li class="list-group-item">Messages</li>
+            <li class="list-group-item">Logout</li>
+          </ul>
+
+        </div>
+
+
+<!-- tasks section -->
+    <div class="col-8">
+
+            <!-- adding a new task
+            <input type="text" placeholder="description" id="newTask">
+            <button id="btnNewTask">Add new task</button> -->
+    <div class="card">
+        <div class="card-header " id="headingOne">
+            <h2 class="mb-0">Today's Tasks</h2>
+        </div>
+        <div class="card-body">
+            <div id="todayTasks"></div>
+        </div>
+    </div>  
+            
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">Upcoming Tasks</h2>
+        </div>
+        <div class="card-body">
+            <div id="upcomingTasks"></div>
+        </div>
+    
+    </div> 
+    </div>
+    </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
